@@ -1,0 +1,72 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.tab-warehouse:first-child {
+    border: none;
+}
+
+.warehouses {
+    border-radius: 4px;
+    @include shadow;
+    z-index: 1;
+}
+
+.sortSubheader {
+    display: none;
+
+    svg {
+        width: 1rem;
+        height: 1rem;
+        margin-left: 4px;
+    }
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 2rem;
+        background-color: $color-light-grey;
+    }
+
+    &__warehouse {
+        width: 23%;
+    }
+    &__address {
+        width: 17%;
+        margin-right: 1rem;
+        @include desktop {
+            width: 22%;
+        }
+
+    }
+    &__contname {
+        width: 20%;
+        @include desktop {
+            width: 18%;
+        }
+
+    }
+    &__continfo {
+        width: 30%;
+        @include desktop {
+            width: 22%;
+        }
+
+    }
+    &__actions {
+        width: 10%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.sortLabel {
+    font-weight: 600;
+    color: $color-slate;
+    font-size: 0.79rem;
+    display: flex;
+    align-items: center;
+}

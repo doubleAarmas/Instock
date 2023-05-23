@@ -1,0 +1,212 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.warehouse-detail {
+  &__card {
+    border-right: 1px solid $color-light-grey;
+    border-left: 1px solid $color-light-grey;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    background-color: $color-white;
+  }
+
+  &__nav {
+    display: flex;
+    padding: 1.5rem 1rem 1rem 1rem;
+    border-bottom: 1px solid $color-cloud;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      padding: 2.5rem 2rem 2rem 2rem;
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+
+      @include tablet {
+        font-size: 3rem;
+      }
+
+      &-icon {
+        height: 1.4rem;
+        display: flex;
+        align-items: center;
+        padding-right: 0.8rem;
+
+        @include tablet {
+          height: 2rem;
+        }
+      }
+    }
+
+    &-button {
+      margin-left: 5.5rem;
+      border-radius: 2rem;
+      height: 2rem;
+      width: 2rem;
+      border: none;
+      font-size: 0;
+      background-color: $color-instock-indigo;
+
+      @include tablet {
+        // margin-left: 22rem;
+        display: flex;
+        width: 8rem;
+        height: 3.8rem;
+        color: #ffffff;
+        padding-bottom: 1rem;
+        font-size: 1.3rem;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      &-icon {
+        height: 1rem;
+
+        @include tablet {
+          margin-right: 0.5rem;
+          height: 1.8rem;
+        }
+      }
+
+      &-icon path {
+        fill: $color-white;
+      }
+    }
+  }
+
+  &__infos {
+    border-bottom: 1px solid $color-cloud;
+    padding: 1rem;
+
+    @include tablet {
+      display: flex;
+      padding: 2.5rem 2.5rem 1rem 2.5rem;
+      border-bottom: unset;
+    }
+
+    &-panels {
+      border-bottom: 1px solid $color-cloud;
+
+      @include tablet {
+        padding: 2.5rem 2.5rem 1rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &-panel {
+      display: flex;
+      padding: 1rem 1rem 0 1rem;
+
+      @include tablet {
+        display: flex;
+      }
+
+      &--nav {
+        display: none;
+
+        @include tablet {
+          display: flex;
+          background-color: $color-light-grey;
+        }
+
+        @include tablet {
+          justify-content: space-between;
+          padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+        }
+      }
+
+      @include tablet {
+        padding: unset;
+      }
+    }
+  }
+
+  &__info {
+    &--padding {
+      margin-bottom: 2rem;
+
+      @include tablet {
+        margin-bottom: unset;
+        padding-right: 5rem;
+        border-right: 1px solid #bdc5d5;
+      }
+
+      @include desktop {
+        padding-right: 15rem;
+      }
+    }
+
+    &--margin {
+      padding-right: 2rem;
+
+      @include tablet {
+        margin-right: 3rem;
+        padding-right: unset;
+      }
+    }
+
+    &-address {
+      display: flex;
+
+      @include tablet {
+        display: unset;
+      }
+    }
+
+    &-title {
+      font-size: 0.57rem;
+      color: $color-slate;
+      line-height: 1rem;
+      font-weight: 400;
+
+      @include tablet {
+        display: flex;
+        font-size: 0.8rem;
+        line-height: 2rem;
+      }
+
+      &-icon {
+        @include tablet {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    &-detail {
+      font-size: 0.67rem;
+      color: $color-slate;
+      line-height: 1rem;
+      font-weight: 400;
+
+      @include tablet {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      &-display {
+        display: flex;
+        align-items: center;
+      }
+
+      &-color {
+        color: $color-instock-indigo;
+      }
+    }
+
+    &--display {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include tablet {
+        justify-content: unset;
+        margin-left: 4rem;
+      }
+    }
+  }
+}

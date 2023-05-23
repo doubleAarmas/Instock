@@ -1,0 +1,63 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.inventory {
+
+    &-SortSubheader {
+        display: none;
+    
+        svg {
+            width: 1rem;
+            height: 1rem;
+            margin-left: 4px;
+        }
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 2rem;
+            background-color: $color-light-grey;
+        }
+    
+        &__item {
+            width: 25%;
+        }
+
+        &__category {
+            width: 20%;
+            @include desktop {
+                width: 22%;
+            }
+        }
+
+        &__status {
+            width: 20%;
+            @include desktop {
+                width: 18%;
+            }
+        }
+
+        &__quantity {
+            width: 10%;
+            @include desktop {
+                width: 10%;
+            }
+        }
+
+        &__warehouse {
+            width: 15%;
+            @include desktop {
+                width: 22%;
+            }
+        }
+
+        &__actions {
+            width: 10%;
+            display: flex;
+            justify-content: flex-end;
+            @include desktop {
+                width: 8%;
+            }
+        }
+    }
+}
+

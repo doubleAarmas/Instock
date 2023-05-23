@@ -1,0 +1,382 @@
+@use '../../styles/partials/global' as *;
+@use '../..//styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.add-warehouse {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $color-white;
+    border: 1px solid $color-light-grey;
+
+    &__img {
+        padding-top: 8px;
+    }
+
+    &__header {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-bottom: 24px;
+        padding-top: 24px;
+        padding-left: $padding-viewport-mobile;
+        padding-right: $padding-viewport-mobile;
+        border-bottom: 1px solid $color-cloud;
+        margin-bottom: $padding-viewport-mobile;
+    }
+
+    &__title {
+        @include h1-mobile;
+        font-weight: 600;
+
+        @include tablet {
+            @include h1-tablet;
+        }
+    }
+
+    &__main {
+        width: 100%;
+    }
+
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    .form-warehouse {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $color-cloud;
+        margin-bottom: $padding-viewport-mobile;
+        padding-left: $padding-viewport-mobile;
+        padding-right: $padding-viewport-mobile;
+
+        @include tablet {
+            max-width: 50%;
+            min-width: 47%;
+            border-bottom: 0;
+            padding-left: $padding-viewport-tablet;
+            padding-right: $padding-viewport-tablet;
+        }
+
+        &__title {
+            @include h2-mobile;
+            font-weight: 600;
+            margin-bottom: $padding-viewport-mobile;
+
+            @include tablet {
+                @include h2-tablet;
+            }
+        }
+
+        &__name-label {
+            font-weight: 600;
+            @include h3-mobile;
+
+            @include tablet {
+                @include h3-tablet;
+            }
+        }
+
+        &__name-input {
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 20px;
+            height: 36px;
+            border: 1px solid $color-cloud;
+
+            @include tablet {
+                height: 38px;
+                margin-bottom: $padding-viewport-tablet;
+            }
+        }
+
+        &__address-label {
+            font-weight: 600;
+            @include h3-mobile;
+
+            @include tablet {
+                @include h3-tablet;
+            }
+        }
+
+        &__address-input {
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 20px;
+            height: 36px;
+            border: 1px solid $color-cloud;
+
+            @include tablet {
+                height: 38px;
+                margin-bottom: $padding-viewport-tablet;
+            }
+        }
+
+        &__city-label {
+            font-weight: 600;
+            @include h3-mobile;
+
+            @include tablet {
+                @include h3-tablet;
+            }
+        }
+
+        &__city-input {
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 20px;
+            height: 36px;
+            border: 1px solid $color-cloud;
+
+            @include tablet {
+                height: 38px;
+                margin-bottom: $padding-viewport-tablet;
+            }
+        }
+
+        &__country-label {
+            font-weight: 600;
+            @include h3-mobile;
+
+            @include tablet {
+                @include h3-tablet;
+            }
+        }
+
+        &__country-input {
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 20px;
+            height: 36px;
+            border: 1px solid $color-cloud;
+
+            @include tablet {
+                height: 38px;
+                margin-bottom: $padding-viewport-tablet;
+            }
+        }
+    }
+
+    .form-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 24px;
+        padding-left: $padding-viewport-mobile;
+        padding-right: $padding-viewport-mobile;
+
+        @include tablet {
+            max-width: 50%;
+            min-width: 47%;
+            border-left: 1px solid $color-cloud;
+            padding-left: $padding-viewport-tablet;
+            padding-right: $padding-viewport-tablet;
+        }
+
+        &__title {
+            @include h2-mobile;
+            font-weight: 600;
+            padding-bottom: 24px;
+
+            @include tablet {
+                @include h2-tablet;
+                padding-bottom: 0;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__name-label {
+            font-weight: 600;
+            @include h3-mobile;
+
+            @include tablet {
+                @include h3-tablet;
+            }
+        }
+
+        &__name-input {
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 20px;
+            height: 36px;
+            border: 1px solid $color-cloud;
+
+            @include tablet {
+                height: 38px;
+                margin-bottom: $padding-viewport-tablet;
+            }
+        }
+
+        &__position-label {
+            font-weight: 600;
+            @include h3-mobile;
+
+            @include tablet {
+                @include h3-tablet;
+            }
+        }
+
+        &__position-input {
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 20px;
+            height: 36px;
+            border: 1px solid $color-cloud;
+
+            @include tablet {
+                height: 38px;
+                margin-bottom: $padding-viewport-tablet;
+            }
+        }
+
+        &__phone-number-label {
+            font-weight: 600;
+            @include h3-mobile;
+
+            @include tablet {
+                @include h3-tablet;
+            }
+        }
+
+        &__phone-number-input {
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 20px;
+            height: 36px;
+            border: 1px solid $color-cloud;
+
+            @include tablet {
+                height: 38px;
+                margin-bottom: $padding-viewport-tablet;
+            }
+        }
+
+        &__email-label {
+            font-weight: 600;
+            @include h3-mobile;
+
+            @include tablet {
+                @include h3-tablet;
+            }
+        }
+
+        &__email-input {
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 20px;
+            height: 36px;
+            border: 1px solid $color-cloud;
+
+            @include tablet {
+                height: 38px;
+                margin-bottom: $padding-viewport-tablet;
+            }
+        }
+    }
+
+    .form-buttons {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        background-color: $color-light-grey;
+        padding: $padding-viewport-mobile;
+        column-gap: $padding-viewport-mobile;
+        @include h3-mobile;
+
+        @include tablet {
+            justify-content: flex-end;
+            @include h3-tablet;
+            padding: $padding-viewport-tablet;
+        }
+
+        &__cancel {
+            all: unset;
+            background-color: $color-white;
+            border: 1px solid $color-cloud;
+            border-radius: 20px;
+            height: 36px;
+            max-width: 50%;
+            min-width: 46%;
+            text-align: center;
+
+            @include tablet {
+                height: 38px;
+                padding-left: 16px;
+                padding-right: 16px;
+                max-width: none;
+                min-width: auto;
+            }
+        }
+
+        &__submit {
+            all: unset;
+            background-color: $color-instock-indigo;
+            border: 1px solid $color-cloud;
+            border-radius: 20px;
+            height: 36px;
+            max-width: 50%;
+            min-width: 46%;
+            color: $color-white;
+            text-align: center;
+
+            @include tablet {
+                height: 38px;
+                padding-left: 16px;
+                padding-right: 16px;
+                max-width: none;
+                min-width: auto;
+            }
+        }
+
+        &__cancel{
+            padding: 1px 100%;
+
+            @include tablet{
+                padding: revert;
+            }
+        }
+    }
+}

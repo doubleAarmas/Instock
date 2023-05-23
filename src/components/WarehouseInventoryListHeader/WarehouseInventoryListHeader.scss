@@ -1,0 +1,64 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.secheader {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    border-radius: 4px 4px 0 0;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    width: 100%;
+    z-index: 1;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    &__title {
+        padding-bottom: 1rem;
+        @include h1-mobile;
+
+        @include tablet {
+            padding: 0;
+            margin-right: auto;
+            @include h1-tablet;
+        }
+    }
+
+    &__search {
+        height: 36px;
+        padding: 0 16px;
+        border-radius: 20px;
+        border: 1px solid $color-cloud;
+        margin-bottom: 1rem;
+        background-image: url('../../assets/icons/search-24px.svg');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 16px) center;
+        @include font-p3-mobile;
+
+        @include tablet {
+            height: 38px;
+            width: 175px;
+            margin: 0 1rem 0 0;
+            @include font-p1-tablet
+        }
+        @include desktop {
+            width: 300px   
+        }
+    }
+
+    &__button {
+        @include button-blue;
+        
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+
+

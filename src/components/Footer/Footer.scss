@@ -1,0 +1,8 @@
+@import "../../styles/partials/variables";
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: $color-light-grey;
+}

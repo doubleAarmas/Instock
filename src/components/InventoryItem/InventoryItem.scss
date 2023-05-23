@@ -1,0 +1,182 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.in-stock {
+    @include in-stock;
+}
+
+.out-of-stock {
+    @include out-of-stock;
+}
+
+.inventoryItem {
+    background-color: $color-white;
+    width: 100%;
+    border-top: 1px solid $color-cloud;
+    @include tablet {
+        display: none;
+    }
+
+    &-container {
+
+        &0 {
+            display: flex;
+            padding: 1rem;
+            @include font-p3-mobile;
+        }
+
+        &1{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding-right: 1rem;
+        }
+        &2{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &-name {
+        
+        &__link {
+            color: $color-instock-indigo;
+        }
+
+        &__name {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            vertical-align: middle;
+            padding-bottom: 1rem;
+
+            & svg {
+                width: 1rem;
+                height: 1rem;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-status {
+        padding-bottom: 1rem;
+
+        &__status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &-quantity {
+
+        &__quantity {
+            padding-bottom: 1rem;
+        }
+    }
+
+    &-icons {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem 1rem 1rem;
+    }
+}
+
+.label {
+    font-weight: 600;
+    color: $color-slate;
+    @include h4-mobile;
+}
+
+
+
+//------Styling for the tablet and desktop dimensions--------
+.tab-inventoryItem {
+    display: none;
+    @include tablet {
+        background-color: $color-white;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-top: 1px solid $color-cloud;
+        padding: 1rem 2rem;
+    }
+
+    &-container {
+
+        &0 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            width: 100%;
+        }
+    }
+
+    &-name {
+        width: 25%;
+        
+        &__link {
+            color: $color-instock-indigo;
+            width: 100%;
+        }
+
+        &__name {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            width: 100%;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-category {
+        width: 20%;
+        @include desktop {
+            width: 22%;   
+        }
+    }
+
+    &-status {
+        width: 20%;
+        @include desktop {
+            width: 18%;
+        }
+
+        &__status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &-quantity {
+        width: 10%;
+        @include desktop {
+            width: 10%;
+        }
+    }
+
+    &-warehouse {
+        width: 15%;
+        @include desktop {
+            width: 22%;
+        }
+    }
+
+    &-icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 10%;
+        @include desktop {
+            width: 8%;
+        }
+    }
+}

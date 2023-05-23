@@ -1,0 +1,216 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.warehouse-detail {
+  
+  &__infos {
+    border-bottom: 1px solid $color-cloud;
+    padding: 1rem;
+    @include tablet {
+      display: flex;
+      padding: 2rem 2.5rem 0.5rem 2.5rem;
+      border-bottom: unset;
+      justify-content: space-between;
+    }
+    &-panels {
+      border-bottom: 1px solid $color-cloud;
+      @include tablet {
+        padding: 2.5rem 2.5rem 1rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    &-panel {
+      display: flex;
+      padding: 1rem 1rem 0 1rem;
+      justify-content: space-between;
+      @include tablet {
+        display: flex;
+      }
+      &--nav {
+        display: none;
+        @include tablet {
+          display: flex;
+          background-color: $color-light-grey;
+        }
+        @include tablet {
+          justify-content: space-between;
+          padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+        }
+      }
+      @include tablet {
+        padding: unset;
+      }
+    }
+  }
+  &__info {
+    margin-bottom: 2rem;
+    @include tablet {
+      padding-bottom: 0.5rem;
+    }
+    &--margin {
+      padding-right: 2rem;
+      @include tablet {
+        margin-right: 1rem;
+      }
+    }
+    &-address {
+      display: flex;
+      @include tablet {
+        flex-direction: column;
+        display: unset;
+      }
+    }
+
+    &-title {
+      font-size: 0.57rem;
+      color: $color-slate;
+      line-height: 1rem;
+      font-weight: 400;
+      @include tablet {
+        display: flex;
+        font-size: 0.6rem;
+        line-height: 1.5rem;
+        align-items: center;
+      }
+      &-icon {
+        @include tablet {
+          margin-left: 1rem;
+        }
+      }
+    }
+    &-detail {
+      font-size: 0.67rem;
+      color: $color-slate;
+      line-height: 1rem;
+      padding-right: 0.1rem;
+      font-weight: 400;
+
+      @include tablet {
+        font-size: 1rem;
+        width: 9rem;
+        line-height: 1.5rem;
+        &-products {
+          @include tablet {
+            width: 23%;
+            display: flex;
+            align-items: center;
+          }
+        }
+        &-type {
+          @include tablet {
+            width: 18%;
+          }
+        }
+        &-instock {
+          @include tablet {
+            width: 34%;
+          }
+        }
+        &-quantity {
+          @include tablet {
+            width: 15%;
+          }
+        }
+      }
+      &-display {
+        display: flex;
+        align-items: center;
+      }
+      &-color {
+        color: $color-instock-indigo;
+        width: 5.8rem;
+        line-height: 1rem;
+        font-weight: 400;
+        font-size: 0.67rem;
+        max-width: max-content;
+        align-items: center;
+      }
+    }
+    &--display {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include tablet {
+      }
+    }
+    &-item {
+      margin-right: 3.5rem;
+      @include tablet {
+        display: flex;
+        margin-right: unset;
+        width: 50%;
+      }
+      &--margin {
+        margin-bottom: 1rem;
+        width: 6rem;
+        @include tablet {
+          margin-right: 6.5rem;
+          width: 40%;
+        }
+      }
+      &-first-part {
+        width: 50%;
+      }
+      &-second-part {
+        width: 50%;
+      }
+    }
+    &-icons {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 1rem 1rem 1rem;
+      &--size {
+        height: 1rem;
+        width: 1rem;
+        @include tablet {
+          height: 2rem;
+          width: 2.3rem;
+        }
+      }
+    }
+    &-products {
+      display: none;
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+        border-bottom: 1px solid $color-cloud;
+      }
+    }
+  }
+}
+.inventory-list {
+  @include tablet {
+    width: 50%;
+  }
+}
+.color {
+  color: $color-instock-indigo;
+}
+.in-stock {
+  @include in-stock;
+}
+
+.out-of-stock {
+  @include out-of-stock;
+}
+.display {
+  @include tablet {
+    display: none;
+  }
+}
+.status {
+  @include tablet {
+    margin-right: 8rem;
+  }
+}
+.address {
+  margin-left: 0.1rem;
+}
+
+.hide__tablet {
+  display: none;
+}

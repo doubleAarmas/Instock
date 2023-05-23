@@ -1,0 +1,170 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+
+.item-detail {
+
+    &__card {
+        border-right: .0625rem solid $color-light-grey;
+        border-left: .0625rem solid $color-light-grey;
+        border-radius: 0.3rem;
+        font-weight: 600;
+        background-color: $color-white;
+        margin-bottom: 35%;
+        @include shadow;
+    }
+
+    &__nav {
+        display: flex;
+        padding: 1.5rem 1rem;
+        border-bottom: .0625rem solid #BDC5D5;
+        align-items: center;
+        justify-content: space-between;
+
+        @include tablet {
+            padding: 2.5rem 2rem 2rem 2rem;
+
+
+        }
+
+        &-goback {
+            border: none;
+            background-color: #FFFFFF;
+            padding-right:.625rem;
+
+        }
+
+        &-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+
+
+            @include tablet {
+                font-size: 3rem;
+            }
+
+            &-icon {
+                height: 1.4rem;
+                display: flex;
+                align-items: center;
+
+
+                @include tablet {
+                    height: 2rem;
+                    padding-right: 0rem;
+                }
+            }
+        }
+
+        &-button {
+            border-radius: 2rem;
+            height: 2rem;
+            width: 2rem;
+            border: none;
+            font-size: 0;
+            background-color: $color-instock-indigo;
+
+            @include tablet {
+                display: flex;
+                width: 8rem;
+                height: 3.8rem;
+                color: #FFFFFF;
+                padding-bottom: 1rem;
+                font-size: 1.3rem;
+                align-items: flex-end;
+                justify-content: center;
+            }
+
+            &-icon {
+                height: 1rem;
+
+                @include tablet {
+                    margin-right: 0.5rem;
+                    height: 1.8rem;
+
+                }
+            }
+
+            &-icon path {
+                fill: $color-white;
+            }
+        }
+
+    }
+}
+
+.item-details {
+    padding: 1rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    &__wrapper {
+        @include tablet {
+            width: 50%
+        }
+    }
+
+    &__title {
+        font-size: 0.57rem;
+        color: #5C667E;
+        line-height: 1rem;
+        font-weight: 400;
+        padding-bottom: .25rem;
+
+    }
+
+    &__detail {
+        font-size: 0.67rem;
+        color: $color-instock-black;
+        line-height: 1rem;
+        font-weight: 400;
+        padding-bottom: 1rem;
+    }
+
+    &__info {
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 1rem;
+
+            @include tablet {
+                width: 50%;
+                padding-left: 1.25rem;
+                border-left: 1px solid #BDC5D5;
+            }
+        }
+
+        &-wrapper2 {
+            display: flex;
+        }
+
+        &-quantity {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &-status-details {
+
+        &.in-stock {
+            @include in-stock;
+        }
+
+        &.out-of-stock {
+            @include out-of-stock;
+        }
+
+    }
+
+
+
+    &-quantity {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

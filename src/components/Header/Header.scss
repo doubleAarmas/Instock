@@ -1,0 +1,77 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+    display: flex;
+    background-color: $color-graphite;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    @include tablet {
+        flex-direction: row;
+        padding: 1.25rem;
+        justify-content: space-between;
+    }
+
+    @include tablet {
+        padding: 1.875rem 2rem 1.5rem;
+    }
+
+    @include desktop {
+        padding: 1.875rem 8.125rem 1.5rem;
+    }
+
+    &__watermark{
+        padding: 1.5rem 0rem;
+
+        @include tablet{
+            padding: revert;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: center;
+
+        @include tablet {
+            width:auto;
+        }
+
+        @include desktop {
+            width: auto;
+        }
+
+        &--warehouse {
+            @include mobil-header-button;
+            display: flex;
+            justify-content: center;
+            @include tablet{
+                height:2.375rem;
+                padding:0rem 1rem;
+            }
+            
+        }
+
+        &--inventory {
+            @include mobil-header-button;
+            display: flex;
+            justify-content: center;
+
+            @include tablet{
+                height:2.375rem;
+                padding:0rem 1rem;
+            }
+    
+        }
+   
+    }
+
+
+   
+
+}

@@ -1,0 +1,39 @@
+@use './styles/partials/global' as *;
+@use './styles/partials/mixins' as *;
+@use './styles/partials/variables' as *;
+
+.body {
+    position: relative;
+    padding: 1rem;
+    background-color: $color-light-grey;
+
+    @include tablet {
+        padding: 1rem 2rem 3rem 2rem;
+    }
+
+    @include desktop {
+        padding: 1rem 8rem 3rem 8rem;
+    }
+}
+
+.header__extension {
+    background-color: $color-graphite;
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin-top: -1px;
+
+    @include tablet {
+        height: 7.5rem;
+    }
+}
+
+.page-components {
+    position: relative;
+    border-radius: 4px;
+    @include shadow;
+    z-index: 2;
+}
